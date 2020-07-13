@@ -1,0 +1,7 @@
+<h1>Editing Pic</h1>
+
+<%= image-tag(@pic.image)  if @pic.image.attached?%>
+<%= render 'form', pic: @pic %>
+
+<%= link_to 'Show', @pic %> |
+<%= link_to 'Back', pics_path %>

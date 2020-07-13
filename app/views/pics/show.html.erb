@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Caption:</strong>
+  <%= @pic.caption %>
+</p>
+
+<% if @pic.image.attached?%>
+ <image src="<%=(url_for(@pic.image))%>">
+<% end %>
+
+<%= link_to 'Edit', edit_pic_path(@pic) %> |
+<%= link_to 'Back', pics_path %>
